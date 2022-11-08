@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image element</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.125em;
+        line-height: 1.6;
+        color: #333;
+        padding: 2em;
+      }
+      .hero {
+        display: grid;
+        gap: 2em;
+        align-items: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      @media (min-width: 1000px) {
+        .hero {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>hallo dunia</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor amet autem veniam aspernatur iste earum error atque neque facilis, deleniti ducimus exercitationem cupiditate eum itaque. Dicta cupiditate impedit dolor iste!</p>
+        <!-- <h1 style="margin-bottom: 1500px">Image Element</h1>
+    <figure>
+      <img src="img/small.png" alt="Kucing" srcset="img/small.png 500w, img/medium.png 720w, img/large.png 1000w" sizes="(min-width : 1200px) 50vw" loading="lazy" />
+      <figcaption>kucing putih yang manis</figcaption>
+    </figure> -->
+      </div>
+      <!-- <source media="(min-width : 960px)" srcset="img2/medium.png" sizes="50vw" /> -->
+      <picture>
+        <source media="(min-width : 1000px)" srcset="img2/large.png" sizes="50vw" />
+        <source media="(min-width : 600px)" srcset="img2/medium.png" sizes="50vw" />
+        <img src="img2/small.png" alt="kucing putih" />
+      </picture>
+    </div>
+  </body>
+</html>
